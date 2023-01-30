@@ -9,7 +9,7 @@ class App extends Component {
       <div className='Palette'>
         {/* navbar */}
         <div className="Palette-colors">
-          {/* Color boxes */}
+          <Palette {...seedColors[4]} />
         </div>
         {/* footer */}
       </div>
