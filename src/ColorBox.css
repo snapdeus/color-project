@@ -12,7 +12,7 @@
     height: 50%;
 } */
 
-.copy-button, .back-button{
+/* .copy-button, .back-button{
     text-decoration: none;
     width: 100px;
     height: 30px;
@@ -32,7 +32,7 @@
     text-transform: uppercase;
     border: none;
     
-}
+} */
 
 /* .copy-button{
     opacity: 0;
@@ -43,9 +43,9 @@
     transition: 0.5s
 } */
 
-.ColorBox.go-back {
+/* .ColorBox.go-back {
     background-color: black;
-}
+} */
 
 /* .box-content{
     position: absolute;
