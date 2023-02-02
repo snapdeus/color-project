@@ -12,7 +12,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import { ChromePicker } from 'react-color';
-
+import DraggableColorBox from './DraggableColorBox';
 
 import styles from './styles/NewPaletteFormStyles';
 import { Button } from '@material-ui/core';
@@ -113,12 +113,12 @@ class NewPaletteForm extends Component {
                     })}
                 >
                     <div className={classes.drawerHeader} />
-                    <ul>
-                        {this.state.colors.map(color => (
-                            <li style={{ backgroundColor: color }}> {color}</li>
-                        ))}
 
-                    </ul>
+                    {this.state.colors.map(color => (
+                        <DraggableColorBox color={color} />
+                    ))}
+
+
                 </main>
             </div>
         );
