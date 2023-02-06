@@ -58,7 +58,7 @@ const styles = {
     boxContent: {
         position: "absolute",
         padding: "10px",
-        width: "100",
+        width: "100%",
         left: "0px",
         bottom: "0px",
         color: "black",
