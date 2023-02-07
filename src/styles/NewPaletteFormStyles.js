@@ -17,6 +17,8 @@ const styles = theme => ({
     },
     drawerPaper: {
         width: drawerWidth,
+        display: 'flex',
+        alignItems: 'center'
     },
     drawerHeader: {
         display: 'flex',
@@ -41,6 +43,20 @@ const styles = theme => ({
             duration: theme.transitions.duration.enteringScreen,
         }),
         marginLeft: 0,
+    },
+    buttons: {
+        width: "100%"
+    },
+    button: {
+        width: "50%"
+    },
+    container: {
+        width: "90%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100%"
     },
 });
 

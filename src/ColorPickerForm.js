@@ -2,6 +2,26 @@ import React, { Component } from "react";
 import { ChromePicker } from 'react-color';
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import { Button } from '@material-ui/core';
+import withStyles from "@material-ui/styles/withStyles";
+
+
+const styles = {
+    picker: {
+        width: "100% !important",
+        marginTop: "2rem"
+    },
+    addColor: {
+        width: "100%",
+        padding: "1rem",
+        marginTop: "1rem",
+        fontSize: "2rem",
+    },
+    colorNameInput: {
+        width: "100%",
+        height: "70px",
+
+    }
+}
 
 class ColorPickerForm extends Component {
     constructor (props) {
@@ -43,23 +63,29 @@ class ColorPickerForm extends Component {
         this.setState({ currentColor: newColor.hex })
     }
     render() {
-        const { paletteIsFull } = this.props;
+        const { paletteIsFull, classes } = this.props;
         const { newColorName, currentColor } = this.state;
         return (
-            <div>
+            <div className={classes.picker} >
                 <ChromePicker
+                    className={classes.picker}
                     color={currentColor}
                     onChangeComplete={this.updateCurrentColor}
                 />
                 <ValidatorForm onSubmit={this.handleSubmit}>
                     <TextValidator
+                        className={classes.colorNameInput}
                         value={newColorName}
                         name='newColorName'
+                        variant='filled'
+                        margin='normal'
+                        placeholder="Color Name"
                         onChange={this.handleChange}
                         validators={['required', 'isColorNameUnique', 'isColorUnique']}
                         errorMessages={['Enter a color name.', 'This name has already been used.', 'That color has already been used.']}
                     />
                     <Button
+                        className={classes.addColor}
                         disabled={paletteIsFull}
                         variant='contained'
                         color='primary'
@@ -77,4 +103,4 @@ class ColorPickerForm extends Component {
 }
 
 
-export default ColorPickerForm
+export default withStyles(styles)(ColorPickerForm);
