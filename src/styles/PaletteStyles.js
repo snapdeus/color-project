@@ -1,7 +1,6 @@
 const styles = {
     Palette: {
-        height: "98vh",
-        width: "99.5%",
+        height: "100vh",
         display: "flex",
         flexDirection: "column",
     },
