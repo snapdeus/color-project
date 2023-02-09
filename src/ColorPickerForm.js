@@ -37,10 +37,14 @@ class ColorPickerForm extends Component {
         })
     }
     handleSubmit() {
-        const newRandomColor = Math.floor(Math.random() * 16777215).toString(16);
+        //instead of using instantValidate={false}, can also assign a new random color 
+        // const newRandomColor = Math.floor(Math.random() * 16777215).toString(16);
         const newColor = { color: this.state.currentColor, name: this.state.newColorName }
         this.props.addNewColor(newColor);
-        this.setState({ newColorName: "", currentColor: `#${ newRandomColor }` })
+        this.setState({
+            newColorName: "",
+            // currentColor: `#${ newRandomColor }`
+        })
 
     }
     updateCurrentColor(newColor) {
@@ -56,7 +60,7 @@ class ColorPickerForm extends Component {
                     color={currentColor}
                     onChangeComplete={this.updateCurrentColor}
                 />
-                <ValidatorForm onSubmit={this.handleSubmit}>
+                <ValidatorForm onSubmit={this.handleSubmit} ref='form' instantValidate={false}>
                     <TextValidator
                         className={classes.colorNameInput}
                         value={newColorName}
