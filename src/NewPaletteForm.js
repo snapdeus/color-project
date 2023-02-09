@@ -138,6 +138,8 @@ class NewPaletteForm extends Component {
 
 
                     <DraggableColorList
+                        //distance is bug fix for delete not working, being counted as  "drag"
+                        distance={20}
                         colors={colors}
                         removeColor={this.removeColor}
                         axis='xy'
