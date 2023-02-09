@@ -98,7 +98,6 @@ class App extends Component {
                   </Page>
                 )} />
               <Route
-
                 render={(routeProps) => (
                   <Page>
                     < PaletteList
