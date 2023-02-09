@@ -46,7 +46,7 @@ class ColorBox extends Component {
                     </div>
                     {/* stop propagation is to keep the transition from including the copy effect */}
                     {showingFullPalette && (
-                        <Link to={`/palette/${ moreURL }`} onClick={e => e.stopPropagation}>
+                        <Link to={`/palette/${ moreURL }`} onClick={e => e.stopPropagation()}>
                             <span className={classes.seeMore}>MORE</span>
                         </Link>
                     )}

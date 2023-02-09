@@ -1,6 +1,7 @@
 import sizes from "./sizes";
 
 const styles = {
+
     Palette: {
         height: "100vh",
         display: "flex",
