@@ -80,7 +80,6 @@ class NewPaletteForm extends Component {
         return (
             <div className={classes.root}>
                 <PaletteFormNav
-
                     open={open}
                     palettes={palettes}
                     handleSubmit={this.handleSubmit}
@@ -135,8 +134,6 @@ class NewPaletteForm extends Component {
                     })}
                 >
                     <div className={classes.drawerHeader} />
-
-
                     <DraggableColorList
                         //distance is bug fix for delete not working, being counted as  "drag"
                         distance={20}

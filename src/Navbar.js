@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import Slider, { Range } from 'rc-slider';
+import Slider from 'rc-slider';
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import Snackbar from "@material-ui/core/Snackbar";
@@ -28,7 +28,7 @@ class Navbar extends Component {
     }
     render() {
         const { level, changeLevel, showingAllColors, classes } = this.props;
-        const { format } = this.state
+        const { format, open } = this.state
         return (
             <header className={classes.Navbar}>
                 <div className={classes.logo}>
@@ -70,7 +70,7 @@ class Navbar extends Component {
                 </div>
                 <Snackbar
                     anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
-                    open={this.state.open}
+                    open={open}
                     autoHideDuration={2000}
                     message={<span id="message-id">Format Changed to {format.toUpperCase()}</span>}
                     ContentProps={{
