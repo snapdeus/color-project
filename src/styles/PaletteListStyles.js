@@ -2,6 +2,15 @@ import sizes from "./sizes"
 import confettiDoodles from "./confetti-doodles.svg"
 
 export default {
+    "@global": {
+        ".fade-exit": {
+            opacity: 1
+        },
+        ".fade-exit-active": {
+            opacity: 0,
+            transition: "opacity 500ms ease-out"
+        }
+    },
     root: {
         overflow: 'scroll',
         backgroundColor: "#250caa",
